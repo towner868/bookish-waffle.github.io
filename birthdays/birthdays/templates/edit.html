@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Edit entry</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Edit Birthday</h2>
+                {% for row in editId %}
+                <form action="/replace" method="post">
+                    <input autocomplete="off" autofocus name="name" placeholder="{{ row['name'] }}" type="text">
+                    <input autocomplete="off" autofocus name="month" placeholder="{{ row['month'] }}" type="text">
+                    <input autocomplete="off" autofocus name="day" placeholder="{{ row['day']}}" type="text">
+                    <input name="id" type="hidden" value="{{ row['id'] }}">
+                    <button type"submit">Edit Birthday</button>
+                </form>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
