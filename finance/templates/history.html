@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index - Portfolio
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1> Transaction History: {{ name[0]["username"] }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Stock Symbol</th>
+                <th>Price per share</th>
+                <th>Amount of shares</th>
+                <th>Date/time</th>
+                <th>Transaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in history %}
+            <tr>
+                <td>{{ row["stockSymbol"]}}</td>
+                <td>{{ row["stockPrice"] }}</td>
+                <td>{{ row["shares"] }}</td>
+                <td>{{ row["DateTime"]}}</td>
+                <td>{{ row["transaction_history"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
