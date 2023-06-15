@@ -1,0 +1,2 @@
+The averages are aprox: .66, .48, and .72, respectively. The average of those being .62, so using the Spotify's Audio Aura colora scheme (which is based on the color spectrum), the overall average is around 647THz, which is roughly a Teal color, I think.
+Because the averages aren't weighted for amount of plays. Add these you would have a more accurate representation of the listner's "audio aura".
