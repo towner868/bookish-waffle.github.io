@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index - Portfolio
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1> Portfolio: {{ name[0]["username"] }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cash Balance</th>
+                <th>Grand Total (cash/stock)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ cash[0]["cash"] }}</td>
+                <td>{{ total }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Stock Symbol</th>
+                <th>Number of Shares Owned</th>
+                <th>Current Share Price</th>
+                <th>Position Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in portfolio %}
+            <tr>
+                <td>{{ row["companyName"]}}</td>
+                <td>{{ row["stockSymbol"] }}</td>
+                <td>{{ row["SUM(shares)"] }}</td>
+                <td>{{ row["stockPrice"] }}</td>
+                <td>{{ row["SUM(totalPrice)"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
