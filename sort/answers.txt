@@ -1,0 +1,10 @@
+sort1 uses: Bubble
+
+How do you know?: Omega is smaller than Big O
+
+sort2 uses: Merge
+How do you know?: Big O/omega == theta log performance.
+
+sort3 uses: Selection
+
+How do you know?: Big O/omega == theta quadratic performance.
